@@ -22,10 +22,12 @@ export class FormComponent implements OnInit {
   private buildForm(){
     this.form = this.formBuilder.group({
       name: ['', [Validators.required]],
+      company: ['', [Validators.required]],
       date: ['', [Validators.required]],
       email: ['', [Validators.email, Validators.required]],
       text: ['', [Validators.maxLength(100), Validators.required]],
-      category: ['', [Validators.required]]
+      category: ['', [Validators.required]],
+      platform: ['', [Validators.required]],
     });
   }
 

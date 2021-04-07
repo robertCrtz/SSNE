@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-8">
             <form [formGroup]="form" class="mt-2" (ngSubmit)="onSubmit()">
-                <!-- Nombre -->
+                <!-- Name -->
                 <div class="input-group-prepend">
                     <span class="input-group-text">
                         Name *
@@ -11,6 +11,16 @@
                 </div>
                     <input class="form-control" type="text" formControlName="name" placeholder="Full Name">
                 <div *ngIf="submitted && f.name.invalid" class="text-danger">Enter your name
+                </div>
+
+                <!-- Company -->
+                <div class="input-group-prepend mt-3">
+                    <span class="input-group-text">
+                        Your Company *
+                    </span>
+                </div>
+                    <input class="form-control" type="text" formControlName="company" placeholder="Company name">
+                <div *ngIf="submitted && f.name.invalid" class="text-danger">Enter your company name
                 </div>
             
                 <!-- Date -->
@@ -29,30 +39,30 @@
                         Email *
                     </span>
                 </div>
-                <p>
                     <input class="form-control" type="email" formControlName="email" placeholder="Example@domain.com">
-                </p>
-                <div *ngIf="submitted && f.email.invalid" class="text-danger"> It's required
+                <div *ngIf="submitted && f.email.invalid" class="text-danger mb-3"> Enter the email
                 </div>
             
                 <!-- text -->
-                <p>
-                    <textarea class="form-control" cols="30" rows="10" formControlName="text" placeholder="About your project"></textarea>
-                </p>
-                <div *ngIf="submitted && f.text.invalid" class="text-danger">100 caracteres máximo
+                    <textarea class="form-control mt-3" cols="30" rows="10" formControlName="text" placeholder="About your project"></textarea>
+                <div *ngIf="submitted && f.text.invalid" class="text-danger">100 characters max
                 </div>
             
-                <!-- Category -->
+                <!-- Videoconference -->
                 <div class="input-group-prepend mt-3">
                     <span class="input-group-text">
-                        Category
+                        Virtual Conference
                     </span>
                 </div>
                     <Select class="custom-select" formControlName="category">
-                        <option value="1">Category 1</option>
-                        <option value="2">Category 2</option>
-                        <option value="3">Category 3</option>
+                        <option disabled selected>Choose the platform</option>
+                        <option value="1">Zoom</option>
+                        <option value="2">Google Meet</option>
+                        <option value="3">Skype</option>
                     </Select>
+                    <input class="form-control mt-1" type="text" formControlName="platform" placeholder="User ID">
+                <div *ngIf="submitted && f.name.invalid" class="text-danger">Enter the platform you want
+                </div>
             
                 <!-- Enviar -->
                 <button class="btn btn-primary mt-3" type="submit">Send</button>
