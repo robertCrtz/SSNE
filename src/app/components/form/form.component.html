@@ -1,1 +1,81 @@
-<p>form works!</p>
+    <h1 class="text-center text-white mt-3">Request</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <form [formGroup]="form" class="mt-2" (ngSubmit)="onSubmit()">
+                <!-- Nombre -->
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        Name *
+                    </span>
+                </div>
+                    <input class="form-control" type="text" formControlName="name" placeholder="Full Name">
+                <div *ngIf="submitted && f.name.invalid" class="text-danger">Enter your name
+                </div>
+            
+                <!-- Date -->
+                <div class="input-group-prepend mt-3">
+                    <span class="input-group-text">
+                        Date *
+                    </span>
+                </div>
+                    <input class="form-control" type="date" formControlName="date" placeholder="Date">
+                <div *ngIf="submitted && f.date.invalid" class="text-danger">Enter the date
+                </div>
+            
+                <!-- Email -->
+                <div class="input-group-prepend mt-3">
+                    <span class="input-group-text">
+                        Email *
+                    </span>
+                </div>
+                <p>
+                    <input class="form-control" type="email" formControlName="email" placeholder="Example@domain.com">
+                </p>
+                <div *ngIf="submitted && f.email.invalid" class="text-danger"> It's required
+                </div>
+            
+                <!-- text -->
+                <p>
+                    <textarea class="form-control" cols="30" rows="10" formControlName="text" placeholder="About your project"></textarea>
+                </p>
+                <div *ngIf="submitted && f.text.invalid" class="text-danger">100 caracteres máximo
+                </div>
+            
+                <!-- Category -->
+                <div class="input-group-prepend mt-3">
+                    <span class="input-group-text">
+                        Category
+                    </span>
+                </div>
+                    <Select class="custom-select" formControlName="category">
+                        <option value="1">Category 1</option>
+                        <option value="2">Category 2</option>
+                        <option value="3">Category 3</option>
+                    </Select>
+            
+                <!-- Enviar -->
+                <button class="btn btn-primary mt-3" type="submit">Send</button>
+            </form>
+        </div>
+
+        <!-- Card -->
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="../../../assets/hands.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Your project</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+        </div>
+    </div>
