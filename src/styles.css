@@ -8,3 +8,11 @@ footer {
     color: white;
     position: absolute;
 }
+
+.contenedor{
+    width: 90%;
+    max-width: 1120px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 03px;
+}
