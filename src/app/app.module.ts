@@ -12,6 +12,13 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FormComponent } from './components/form/form.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
+//Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +33,10 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

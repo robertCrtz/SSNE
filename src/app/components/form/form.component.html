@@ -20,7 +20,7 @@
                     </span>
                 </div>
                     <input class="form-control" type="text" formControlName="company" placeholder="Company name">
-                <div *ngIf="submitted && f.name.invalid" class="text-danger">Enter your company name
+                <div *ngIf="submitted && f.company.invalid" class="text-danger">Enter your company name
                 </div>
             
                 <!-- Date -->
@@ -44,7 +44,7 @@
                 </div>
             
                 <!-- text -->
-                    <textarea class="form-control mt-3" cols="30" rows="10" formControlName="text" placeholder="About your project"></textarea>
+                    <textarea class="form-control mt-3" cols="30" rows="10" formControlName="text" placeholder="Tell us about your project"></textarea>
                 <div *ngIf="submitted && f.text.invalid" class="text-danger">100 characters max
                 </div>
             
