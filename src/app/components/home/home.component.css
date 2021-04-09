@@ -1,0 +1,13 @@
+/*img{
+    width: 1321px;
+    height: 500px;
+}*/
+
+
+.contenedor1{
+    width: 80%;
+    max-width: 920px;
+    margin: 0px auto;
+    display: grid;
+    grid-gap: 03px;
+}
