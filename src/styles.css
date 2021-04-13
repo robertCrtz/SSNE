@@ -1,6 +1,21 @@
 body {
-    background-color: #36939b;
+    background-image: url(assets/Engineering-Background.jpg);
+    background-size: 1760px 1590px;
+    font-family: sans-serif;
+    /*background: linear-gradient(to bottom, #36939b, #ffffff);*/
+} /*#36939b*/
+
+/*.fondo{
+    background-size: 100%;
+    position: absolute;
 }
+
+.fondo::after{
+    background-image: url(assets/fondo.jpg);
+    content: "";
+    margin: 0 0 0 0;
+    opacity: 0.2;
+}*/
 
 footer {
     width: 100%;

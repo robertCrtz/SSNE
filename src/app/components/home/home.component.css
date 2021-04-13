@@ -1,7 +1,10 @@
-/*img{
-    width: 1321px;
-    height: 500px;
-}*/
+img.card-img-bottom{
+    width: 320px;
+    height: 199px;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
 
 
 .contenedor1{
@@ -10,4 +13,8 @@
     margin: 0px auto;
     display: grid;
     grid-gap: 03px;
+}
+
+h1.bg-orange{
+    background-color: rgb(243, 158, 0);
 }
