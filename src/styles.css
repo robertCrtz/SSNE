@@ -8,13 +8,13 @@ body {
 /*.fondo{
     background-size: 100%;
     position: absolute;
-}
-
-.fondo::after{
     background-image: url(assets/fondo.jpg);
     content: "";
     margin: 0 0 0 0;
     opacity: 0.2;
+}
+
+.fondo::after{
 }*/
 
 footer {

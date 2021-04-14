@@ -9,6 +9,7 @@ export class FooterComponent implements OnInit {
   anio: number;
 
   constructor() {
+    // Update date automatically
     this.anio = new Date().getFullYear();
    }
 
